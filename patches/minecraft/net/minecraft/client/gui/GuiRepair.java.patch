@@ -1,0 +1,11 @@
+--- ../src-base/minecraft/net/minecraft/client/gui/GuiRepair.java
++++ ../src-work/minecraft/net/minecraft/client/gui/GuiRepair.java
+@@ -112,7 +112,7 @@
+ 
+     protected void func_73869_a(char p_73869_1_, int p_73869_2_) throws IOException
+     {
+-        if (this.field_147091_w.func_146201_a(p_73869_1_, p_73869_2_))
++        if (net.minecraftforge.common.permission.Permission.canRenameInAnvil(field_147094_x)&&this.field_147091_w.func_146201_a(p_73869_1_, p_73869_2_))
+         {
+             this.func_147090_g();
+         }
