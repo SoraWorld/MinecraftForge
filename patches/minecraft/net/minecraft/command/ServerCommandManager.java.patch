@@ -1,0 +1,11 @@
+--- ../src-base/minecraft/net/minecraft/command/ServerCommandManager.java
++++ ../src-work/minecraft/net/minecraft/command/ServerCommandManager.java
+@@ -125,7 +125,7 @@
+ 
+         ITextComponent itextcomponent = new TextComponentTranslation("chat.type.admin", new Object[] {p_152372_1_.func_70005_c_(), new TextComponentTranslation(p_152372_4_, p_152372_5_)});
+         itextcomponent.func_150256_b().func_150238_a(TextFormatting.GRAY);
+-        itextcomponent.func_150256_b().func_150217_b(Boolean.valueOf(true));
++        itextcomponent.func_150256_b().func_150217_b(Boolean.valueOf(false));
+ 
+         if (flag)
+         {

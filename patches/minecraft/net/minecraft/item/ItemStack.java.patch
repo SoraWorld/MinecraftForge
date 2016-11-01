@@ -203,6 +203,15 @@
      }
  
      public static boolean func_179545_c(@Nullable ItemStack p_179545_0_, @Nullable ItemStack p_179545_1_)
+@@ -543,7 +570,7 @@
+ 
+         if (this.func_82837_s())
+         {
+-            s = TextFormatting.ITALIC + s;
++            s = TextFormatting.RESET + s;
+         }
+ 
+         s = s + TextFormatting.RESET;
 @@ -764,6 +791,7 @@
              }
          }
@@ -239,6 +248,15 @@
          this.field_151002_e = p_150996_1_;
      }
  
+@@ -917,7 +957,7 @@
+ 
+         if (this.func_82837_s())
+         {
+-            textcomponentstring.func_150256_b().func_150217_b(Boolean.valueOf(true));
++            textcomponentstring.func_150256_b().func_150217_b(Boolean.valueOf(false));
+         }
+ 
+         ITextComponent itextcomponent = (new TextComponentString("[")).func_150257_a(textcomponentstring).func_150258_a("]");
 @@ -993,4 +1033,45 @@
              return false;
          }

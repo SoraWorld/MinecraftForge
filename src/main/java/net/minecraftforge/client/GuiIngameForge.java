@@ -624,7 +624,7 @@ public class GuiIngameForge extends GuiIngame
             {
                 String name = this.highlightingItemStack.getDisplayName();
                 if (this.highlightingItemStack.hasDisplayName())
-                    name = TextFormatting.ITALIC + name;
+                    name = TextFormatting.RESET + name;
 
                 name = this.highlightingItemStack.getItem().getHighlightTip(this.highlightingItemStack, name);
 
