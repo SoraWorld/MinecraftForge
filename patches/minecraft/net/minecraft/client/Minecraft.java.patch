@@ -244,6 +244,98 @@
          }
  
          this.func_184117_aA();
+@@ -1941,14 +1966,14 @@
+         if (p_184122_1_ == 30)
+         {
+             this.field_71438_f.func_72712_a();
+-            this.func_184120_a("Reloading all chunks", new Object[0]);
++            this.func_184120_a(I18n.func_135052_a("debug.reloadingck"), new Object[0]);
+             return true;
+         }
+         else if (p_184122_1_ == 48)
+         {
+             boolean flag1 = !this.field_175616_W.func_178634_b();
+             this.field_175616_W.func_178629_b(flag1);
+-            this.func_184120_a("Hitboxes: {0}", new Object[] {flag1 ? "shown" : "hidden"});
++            this.func_184120_a(I18n.func_135052_a("debug.hitbox")+": {0}", I18n.func_135052_a(flag1?"debug.shown":"debug.hidden"));
+             return true;
+         }
+         else if (p_184122_1_ == 32)
+@@ -1963,19 +1988,19 @@
+         else if (p_184122_1_ == 33)
+         {
+             this.field_71474_y.func_74306_a(GameSettings.Options.RENDER_DISTANCE, GuiScreen.func_146272_n() ? -1 : 1);
+-            this.func_184120_a("RenderDistance: {0}", new Object[] {Integer.valueOf(this.field_71474_y.field_151451_c)});
++            this.func_184120_a(I18n.func_135052_a("debug.renderdis")+": {0}", new Object[] {Integer.valueOf(this.field_71474_y.field_151451_c)});
+             return true;
+         }
+         else if (p_184122_1_ == 34)
+         {
+             boolean flag = this.field_184132_p.func_190075_b();
+-            this.func_184120_a("Chunk borders: {0}", new Object[] {flag ? "shown" : "hidden"});
++            this.func_184120_a(I18n.func_135052_a("debug.chunckbd")+": {0}", I18n.func_135052_a(flag?"debug.shown":"debug.hidden"));
+             return true;
+         }
+         else if (p_184122_1_ == 35)
+         {
+             this.field_71474_y.field_82882_x = !this.field_71474_y.field_82882_x;
+-            this.func_184120_a("Advanced tooltips: {0}", new Object[] {this.field_71474_y.field_82882_x ? "shown" : "hidden"});
++            this.func_184120_a(I18n.func_135052_a("debug.advancetip")+": {0}", I18n.func_135052_a(this.field_71474_y.field_82882_x?"debug.shown":"debug.hidden"));
+             this.field_71474_y.func_74303_b();
+             return true;
+         }
+@@ -1983,7 +2008,7 @@
+         {
+             if (!this.field_71439_g.func_70003_b(2, ""))
+             {
+-                this.func_184120_a("Unable to switch gamemode, no permission", new Object[0]);
++                this.func_184120_a(I18n.func_135052_a("debug.nopermission"), new Object[0]);
+             }
+             else if (this.field_71439_g.func_184812_l_())
+             {
+@@ -2000,29 +2025,29 @@
+         {
+             this.field_71474_y.field_82881_y = !this.field_71474_y.field_82881_y;
+             this.field_71474_y.func_74303_b();
+-            this.func_184120_a("PauseOnLostFocus: {0}", new Object[] {this.field_71474_y.field_82881_y ? "enabled" : "disabled"});
++            this.func_184120_a(I18n.func_135052_a("debug.pauseonlost")+": {0}",I18n.func_135052_a(this.field_71474_y.field_82881_y?"debug.enabled":"debug.disabled"));
+             return true;
+         }
+         else if (p_184122_1_ == 16)
+         {
+-            this.func_184120_a("Keybindings:", new Object[0]);
++            this.func_184120_a(I18n.func_135052_a("debug.keybind"), new Object[0]);
+             GuiNewChat guinewchat = this.field_71456_v.func_146158_b();
+-            guinewchat.func_146227_a(new TextComponentString("F3 + A = Reload chunks"));
+-            guinewchat.func_146227_a(new TextComponentString("F3 + B = Show hitboxes"));
+-            guinewchat.func_146227_a(new TextComponentString("F3 + D = Clear chat"));
+-            guinewchat.func_146227_a(new TextComponentString("F3 + F = Cycle renderdistance (Shift to inverse)"));
+-            guinewchat.func_146227_a(new TextComponentString("F3 + G = Show chunk boundaries"));
+-            guinewchat.func_146227_a(new TextComponentString("F3 + H = Advanced tooltips"));
+-            guinewchat.func_146227_a(new TextComponentString("F3 + N = Cycle creative <-> spectator"));
+-            guinewchat.func_146227_a(new TextComponentString("F3 + P = Pause on lost focus"));
+-            guinewchat.func_146227_a(new TextComponentString("F3 + Q = Show this list"));
+-            guinewchat.func_146227_a(new TextComponentString("F3 + T = Reload resourcepacks"));
++            guinewchat.func_146227_a(new TextComponentString("F3 + A = "+I18n.func_135052_a("debug.reloadck")));
++            guinewchat.func_146227_a(new TextComponentString("F3 + B = "+I18n.func_135052_a("debug.showhitbox")));
++            guinewchat.func_146227_a(new TextComponentString("F3 + D = "+I18n.func_135052_a("debug.clear")));
++            guinewchat.func_146227_a(new TextComponentString("F3 + F = "+I18n.func_135052_a("debug.cycledis")));
++            guinewchat.func_146227_a(new TextComponentString("F3 + G = "+I18n.func_135052_a("debug.showckbd")));
++            guinewchat.func_146227_a(new TextComponentString("F3 + H = "+I18n.func_135052_a("debug.advancetip")));
++            guinewchat.func_146227_a(new TextComponentString("F3 + N = "+I18n.func_135052_a("debug.cyclemode")));
++            guinewchat.func_146227_a(new TextComponentString("F3 + P = "+I18n.func_135052_a("debug.pauseonlost")));
++            guinewchat.func_146227_a(new TextComponentString("F3 + Q = "+I18n.func_135052_a("debug.showthis")));
++            guinewchat.func_146227_a(new TextComponentString("F3 + T = "+I18n.func_135052_a("debug.reloadpk")));
+             return true;
+         }
+         else if (p_184122_1_ == 20)
+         {
+             this.func_110436_a();
+-            this.func_184120_a("Reloaded resourcepacks", new Object[0]);
++            this.func_184120_a(I18n.func_135052_a("debug.reloadedpk"), new Object[0]);
+             return true;
+         }
+         else
 @@ -2177,6 +2202,8 @@
      {
          while (Mouse.next())
@@ -253,7 +345,13 @@
              int i = Mouse.getEventButton();
              KeyBinding.func_74510_a(i - 100, Mouse.getEventButtonState());
  
-@@ -2242,6 +2269,7 @@
+@@ -2237,11 +2264,12 @@
+ 
+     private void func_184120_a(String p_184120_1_, Object... p_184120_2_)
+     {
+-        this.field_71456_v.func_146158_b().func_146227_a((new TextComponentString("")).func_150257_a((new TextComponentString("[Debug]: ")).func_150255_a((new Style()).func_150238_a(TextFormatting.YELLOW).func_150227_a(Boolean.valueOf(true)))).func_150258_a(MessageFormat.format(p_184120_1_, p_184120_2_)));
++        this.field_71456_v.func_146158_b().func_146227_a((new TextComponentString("")).func_150257_a((new TextComponentString(I18n.func_135052_a("debug.prefix"))).func_150255_a((new Style()).func_150238_a(TextFormatting.YELLOW).func_150227_a(Boolean.valueOf(true)))).func_150258_a(MessageFormat.format(p_184120_1_, p_184120_2_)));
+     }
  
      public void func_71371_a(String p_71371_1_, String p_71371_2_, @Nullable WorldSettings p_71371_3_)
      {
