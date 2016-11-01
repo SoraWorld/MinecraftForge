@@ -1,0 +1,11 @@
+--- ../src-base/minecraft/net/minecraft/client/gui/GuiPlayerTabOverlay.java
++++ ../src-work/minecraft/net/minecraft/client/gui/GuiPlayerTabOverlay.java
+@@ -187,7 +187,7 @@
+ 
+                 if (networkplayerinfo1.func_178848_b() == GameType.SPECTATOR)
+                 {
+-                    this.field_175250_f.field_71466_p.func_175063_a(TextFormatting.ITALIC + s4, (float)j2, (float)k2, -1862270977);
++                    this.field_175250_f.field_71466_p.func_175063_a(TextFormatting.GRAY + s4, (float)j2, (float)k2, -1862270977);
+                 }
+                 else
+                 {
